@@ -39,7 +39,7 @@ pgrep -x Snuffler >/dev/null || fail "Snuffler quit or crashed right after a pla
 shot 1-empty
 quit
 
-# 2. Two workbooks handed over by Finder (application:openURLs:), then BUST
+# 2. Two workbooks handed over by Finder (application:openURLs:), then SNUFF
 #    and, at xsmall, SQUISH -- clicked by the app itself through its self-test
 #    hook, exactly as the buttons would be.
 REPORT="$WORK/report.txt"

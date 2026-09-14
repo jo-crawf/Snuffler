@@ -259,7 +259,7 @@ impl State {
         let fa: u64 = cleaned.iter().map(|c| c.after).sum();
 
         self.headline = if which == Action::Bust {
-            if cleaned.len() == 1 { format!("{} busted", thousands(ghosts)) }
+            if cleaned.len() == 1 { format!("{} snuffed", thousands(ghosts)) }
             else { format!("{} cleaned", cleaned.len()) }
         } else {
             let pct = 100.0 * (1.0 - (fa as f64 / fb.max(1) as f64));
@@ -288,14 +288,16 @@ impl State {
 
     // ------------------------------------------------------- panel wording
 
-    /// BUST / SQUISH, or progress while that action runs.
+    /// SNUFF / SQUISH, or progress while that action runs. (SNUFF is what
+    /// GhostBuster calls BUST; internally it is still Action::Bust, and the
+    /// headless flag is still --bust so the two builds stay comparable.)
     pub fn button_label(&self, which: Action) -> String {
         if self.stage == Stage::Working && self.action == Some(which) {
             let n = self.sources.len();
             if n > 1 { format!("{} / {}", self.progress, n) } else { "WORKING".into() }
         } else {
             match which {
-                Action::Bust => "BUST".into(),
+                Action::Bust => "SNUFF".into(),
                 Action::Squish => "SQUISH".into(),
             }
         }
@@ -484,9 +486,9 @@ mod tests {
 
         run(&mut st, Action::Bust);
         assert_eq!(st.stage, Stage::Done);
-        assert_eq!(st.headline, "306 busted");
-        assert!(!st.can_bust(), "BUST latches after running");
-        assert!(st.can_squish(), "SQUISH is not gated on BUST");
+        assert_eq!(st.headline, "306 snuffed");
+        assert!(!st.can_bust(), "SNUFF latches after running");
+        assert!(st.can_squish(), "SQUISH is not gated on SNUFF");
 
         assert!(st.select(Quality::XSmall));
         run(&mut st, Action::Squish);
@@ -580,7 +582,7 @@ mod tests {
         let dir = scratch("progress");
         let mut st = State::new();
         st.load(vec![copy(&dir, "ghosts.xlsx"), copy(&dir, "photos.xlsx")]);
-        assert_eq!(st.button_label(Action::Bust), "BUST");
+        assert_eq!(st.button_label(Action::Bust), "SNUFF");
         let _job = st.begin(Action::Bust);
         st.progress(1, Vec::new());
         assert_eq!(st.button_label(Action::Bust), "2 / 2");

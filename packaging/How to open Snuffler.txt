@@ -27,7 +27,7 @@ Using it
 --------
 
 Drop your Excel files onto the left-hand panel (or click it to choose them),
-then click BUST, SQUISH, or both. Your original files are never changed; the
+then click SNUFF, SQUISH, or both. Your original files are never changed; the
 repaired copy is saved right next to each one, with "(cleaned)" in its name.
 
 The first time Snuffler saves into your Desktop, Documents or Downloads

@@ -459,7 +459,7 @@ fn on_click(mtm: MainThreadMarker, p: NSPoint) {
 // --------------------------------------------------------------- selftest
 
 /// CI drives the real window through this, clicking as a person would:
-/// SNUFFLER_SELFTEST="bust,xsmall" presses BUST, then picks xsmall and presses
+/// SNUFFLER_SELFTEST="bust,xsmall" presses SNUFF, then picks xsmall and presses
 /// SQUISH. SNUFFLER_SELFTEST_REPORT names a file that receives what the result
 /// panel says once the last step finishes.
 fn selftest_next() {

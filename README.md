@@ -3,7 +3,7 @@
 GhostBuster, for the Mac. Two repairs for Excel workbooks that have grown
 unusable.
 
-**BUST** removes the invisible, zero-size pictures Excel accumulates in a
+**SNUFF** (GhostBuster's BUST) removes the invisible, zero-size pictures Excel accumulates in a
 worksheet when images are pasted onto it over and over. They are never visible
 and never deleted, but Excel lays out every one of them, so a sheet carrying
 tens of thousands becomes unresponsive.
@@ -190,7 +190,7 @@ that on every push, then:
 - runs the unit tests and the conformance suite against the binary inside the
   `.dmg`, natively and again under Rosetta
 - opens the app the way Finder does, hands it two workbooks, and has it press
-  BUST and SQUISH through its own self-test hook, then checks what the result
+  SNUFF and SQUISH through its own self-test hook, then checks what the result
   panel said and that the cleaned files are valid
 - uploads screenshots of the window and the `.dmg` as artifacts
 
