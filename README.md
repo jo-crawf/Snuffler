@@ -40,9 +40,12 @@ that. Snuffler is ad-hoc signed, which matters: an unsigned app on Apple
 Silicon is reported as "damaged" with no way past it, whereas an ad-hoc signed
 one gets the ordinary warning, which can be approved once:
 
-1. Double-click Snuffler. At the warning, click **Done**.
-2. **System Settings -> Privacy & Security**, scroll down, **Open Anyway**.
-3. Password, then **Open Anyway** again.
+1. Drag Snuffler into Applications *first*. The approval is recorded on the
+   copy that was opened, and the copy inside the `.dmg` is on a read-only
+   disk -- approve that one and then move it, and the warning comes back.
+2. Double-click Snuffler in Applications. At the warning, click **Done**.
+3. **System Settings -> Privacy & Security**, scroll down, **Open Anyway**.
+4. Password, then **Open Anyway** again.
 
 After that it opens like any other app. Before macOS 15, right-click -> Open
 does the same in one step. This is spelled out in `How to open Snuffler.txt`
