@@ -5,10 +5,12 @@ Snuffler is a free little program that was never registered with Apple, so the
 first time you open it your Mac will say it "could not verify" Snuffler. That
 is expected, and you only have to do this once:
 
-  1. Drag Snuffler into the Applications folder shown in this window.
+  1. Double-click Snuffler.dmg. A window opens with two icons in it: Snuffler
+     and an Applications folder. Drag Snuffler onto the Applications folder.
 
-  2. Open Applications and double-click Snuffler. When the warning appears,
-     click "Done". (Not "Move to Trash".)
+  2. Open your Applications folder (in Finder, choose Go > Applications) and
+     double-click Snuffler there. When the warning appears, click "Done".
+     (Not "Move to Trash".)
 
   3. Open System Settings from the Apple menu at the top left of the screen,
      and click "Privacy & Security" in the list on the left.
