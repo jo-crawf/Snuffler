@@ -1,0 +1,15 @@
+/target
+/dist
+__pycache__/
+.DS_Store
+
+# Never commit real workbooks, or anything cleaned from them. The only
+# spreadsheets in this repository are the synthetic fixtures and the golden
+# results GhostBuster produced from them.
+*.xlsx
+*.xlsm
+*.xls
+!/conformance/fixtures/*.xlsx
+!/conformance/fixtures/*.xlsm
+!/conformance/golden/*/*.xlsx
+!/conformance/golden/*/*.xlsm

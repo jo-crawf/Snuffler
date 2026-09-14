@@ -1,0 +1,77 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write # only the release step on a v* tag uses it
+
+jobs:
+  mac:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Python tools for the conformance suite
+        run: pip install pillow openpyxl
+
+      - name: Rust targets
+        run: rustup target add aarch64-apple-darwin x86_64-apple-darwin
+
+      - name: Unit tests
+        run: cargo test --locked
+
+      - name: Build Snuffler.app and Snuffler.dmg
+        run: packaging/make_app.sh
+
+      - name: Inspect the bundle
+        run: |
+          lipo -info dist/Snuffler.app/Contents/MacOS/Snuffler
+          lipo dist/Snuffler.app/Contents/MacOS/Snuffler -verify_arch arm64 x86_64
+          codesign -dv --verbose=2 dist/Snuffler.app
+          plutil -lint dist/Snuffler.app/Contents/Info.plist
+          ls -la dist
+
+      # Tested from inside the disk image, i.e. exactly what gets sent.
+      - name: Conformance (Apple Silicon)
+        run: |
+          hdiutil attach dist/Snuffler.dmg -mountpoint /Volumes/Snuffler -nobrowse
+          python conformance/run.py --bin /Volumes/Snuffler/Snuffler.app/Contents/MacOS/Snuffler
+
+      - name: Conformance (Intel, under Rosetta)
+        run: |
+          arch -x86_64 /usr/bin/true 2>/dev/null || softwareupdate --install-rosetta --agree-to-license
+          python conformance/run.py --bin /Volumes/Snuffler/Snuffler.app/Contents/MacOS/Snuffler --arch x86_64
+
+      - name: The window, driven through its own buttons
+        run: packaging/gui_smoke.sh
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: dist/screens/
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Snuffler.dmg
+          path: dist/Snuffler.dmg
+          if-no-files-found: error
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" dist/Snuffler.dmg
+          --title "Snuffler $GITHUB_REF_NAME"
+          --notes-file "packaging/How to open Snuffler.txt"

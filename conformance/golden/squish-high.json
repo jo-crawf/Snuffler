@@ -1,0 +1,205 @@
+{
+ "results": [
+  {
+   "changed": false,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 0,
+   "file_before": 5752,
+   "ghosts_removed": 0,
+   "images_after": 0,
+   "images_before": 0,
+   "images_converted": 0,
+   "media": [],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 0,
+    "images": 0
+   },
+   "source": "clean.xlsx"
+  },
+  {
+   "changed": true,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 405381,
+   "file_before": 342380,
+   "ghosts_removed": 0,
+   "images_after": 381500,
+   "images_before": 1732112,
+   "images_converted": 4,
+   "media": [
+    {
+     "bytes": 270346,
+     "fnv": "9f106340c63afd27",
+     "name": "xl/media/image1.png"
+    },
+    {
+     "bytes": 58549,
+     "fnv": "9192129d26a8812e",
+     "name": "xl/media/image2.png"
+    },
+    {
+     "bytes": 52396,
+     "fnv": "d131752a5d1a38cd",
+     "name": "xl/media/image3.png"
+    },
+    {
+     "bytes": 43440,
+     "fnv": "429a862af6adfe59",
+     "name": "xl/media/image4.emf"
+    },
+    {
+     "bytes": 1028,
+     "fnv": "2c8a59b21d81150d",
+     "name": "xl/media/image5.wmf"
+    },
+    {
+     "bytes": 209,
+     "fnv": "3243d1c89fc6afa7",
+     "name": "xl/media/image6.png"
+    }
+   ],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 2,
+    "images": 6
+   },
+   "source": "emf-heavy.xlsm"
+  },
+  {
+   "changed": true,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 248579,
+   "file_before": 240087,
+   "ghosts_removed": 0,
+   "images_after": 148580,
+   "images_before": 1060499,
+   "images_converted": 3,
+   "media": [
+    {
+     "bytes": 134149,
+     "fnv": "ea9fbda1560e763a",
+     "name": "xl/media/image1.png"
+    },
+    {
+     "bytes": 7337,
+     "fnv": "086a113c94047e6c",
+     "name": "xl/media/image2.png"
+    },
+    {
+     "bytes": 71665,
+     "fnv": "d5523aea627728dd",
+     "name": "xl/media/image3.jpeg"
+    },
+    {
+     "bytes": 3085,
+     "fnv": "266ea56a6ffab43f",
+     "name": "xl/media/image4.jpeg"
+    },
+    {
+     "bytes": 12837,
+     "fnv": "d73dc7eae90954e1",
+     "name": "xl/media/image5.png"
+    },
+    {
+     "bytes": 7094,
+     "fnv": "a387f91e8717e234",
+     "name": "xl/media/image6.png"
+    }
+   ],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 306,
+    "images": 6
+   },
+   "source": "ghosts.xlsx"
+  },
+  {
+   "rejected": "not a real Excel file",
+   "source": "no-workbook.xlsx"
+  },
+  {
+   "rejected": "not a real Excel file",
+   "source": "not-excel.xlsx"
+  },
+  {
+   "changed": true,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 500715,
+   "file_before": 494546,
+   "ghosts_removed": 0,
+   "images_after": 36837,
+   "images_before": 197062,
+   "images_converted": 3,
+   "media": [
+    {
+     "bytes": 83868,
+     "fnv": "c171b700194e3272",
+     "name": "xl/media/image1.jpeg"
+    },
+    {
+     "bytes": 108346,
+     "fnv": "a79669f0ed4cffb3",
+     "name": "xl/media/image2.jpeg"
+    },
+    {
+     "bytes": 81609,
+     "fnv": "336f338755a4ae9d",
+     "name": "xl/media/image3.jpeg"
+    },
+    {
+     "bytes": 125619,
+     "fnv": "26aede371eca4331",
+     "name": "xl/media/image4.jpeg"
+    },
+    {
+     "bytes": 86933,
+     "fnv": "6144445fe16d38a6",
+     "name": "xl/media/image5.jpeg"
+    },
+    {
+     "bytes": 3671,
+     "fnv": "ad4b45c490fea6ad",
+     "name": "xl/media/image6.jpeg"
+    },
+    {
+     "bytes": 1032,
+     "fnv": "51a894d46a8e8471",
+     "name": "xl/media/image7.png"
+    },
+    {
+     "bytes": 5591,
+     "fnv": "abd87c6f91985c91",
+     "name": "xl/media/image8.png"
+    },
+    {
+     "bytes": 30214,
+     "fnv": "3a477ce14e3e2d80",
+     "name": "xl/media/image9.png"
+    }
+   ],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 0,
+    "images": 9
+   },
+   "source": "photos.xlsx"
+  }
+ ],
+ "tool": "rust"
+}

@@ -1,0 +1,195 @@
+{
+ "results": [
+  {
+   "changed": false,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 0,
+   "file_before": 5752,
+   "ghosts_removed": 0,
+   "images_after": 0,
+   "images_before": 0,
+   "images_converted": 0,
+   "media": [],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 0,
+    "images": 0
+   },
+   "source": "clean.xlsx"
+  },
+  {
+   "changed": true,
+   "drawing_after": 4134,
+   "drawing_before": 5598,
+   "error": null,
+   "file_after": 344219,
+   "file_before": 342380,
+   "ghosts_removed": 2,
+   "images_after": 0,
+   "images_before": 0,
+   "images_converted": 0,
+   "media": [
+    {
+     "bytes": 1229028,
+     "fnv": "caedc37b4e9d6433",
+     "name": "xl/media/image1.emf"
+    },
+    {
+     "bytes": 240228,
+     "fnv": "42448df56bc03c64",
+     "name": "xl/media/image2.emf"
+    },
+    {
+     "bytes": 262372,
+     "fnv": "3b1f12fb155313f4",
+     "name": "xl/media/image3.emf"
+    },
+    {
+     "bytes": 43440,
+     "fnv": "429a862af6adfe59",
+     "name": "xl/media/image4.emf"
+    },
+    {
+     "bytes": 1028,
+     "fnv": "2c8a59b21d81150d",
+     "name": "xl/media/image5.wmf"
+    },
+    {
+     "bytes": 484,
+     "fnv": "42e3f5324264bea8",
+     "name": "xl/media/image6.emf"
+    }
+   ],
+   "media_removed": 0,
+   "pictures_kept": 6,
+   "rejected": null,
+   "scan": {
+    "ghosts": 2,
+    "images": 6
+   },
+   "source": "emf-heavy.xlsm"
+  },
+  {
+   "changed": true,
+   "drawing_after": 2977,
+   "drawing_before": 198739,
+   "error": null,
+   "file_after": 221096,
+   "file_before": 240087,
+   "ghosts_removed": 306,
+   "images_after": 0,
+   "images_before": 0,
+   "images_converted": 0,
+   "media": [
+    {
+     "bytes": 691428,
+     "fnv": "eb6371f7a478d5f8",
+     "name": "xl/media/image1.emf"
+    },
+    {
+     "bytes": 360478,
+     "fnv": "31fb127fa550732f",
+     "name": "xl/media/image2.png"
+    },
+    {
+     "bytes": 71665,
+     "fnv": "d5523aea627728dd",
+     "name": "xl/media/image3.jpeg"
+    },
+    {
+     "bytes": 8593,
+     "fnv": "aa24e4a60f0fb1cb",
+     "name": "xl/media/image6.png"
+    }
+   ],
+   "media_removed": 2,
+   "pictures_kept": 4,
+   "rejected": null,
+   "scan": {
+    "ghosts": 306,
+    "images": 6
+   },
+   "source": "ghosts.xlsx"
+  },
+  {
+   "rejected": "not a real Excel file",
+   "source": "no-workbook.xlsx"
+  },
+  {
+   "rejected": "not a real Excel file",
+   "source": "not-excel.xlsx"
+  },
+  {
+   "changed": false,
+   "drawing_after": 0,
+   "drawing_before": 0,
+   "error": null,
+   "file_after": 0,
+   "file_before": 494546,
+   "ghosts_removed": 0,
+   "images_after": 0,
+   "images_before": 0,
+   "images_converted": 0,
+   "media": [
+    {
+     "bytes": 83868,
+     "fnv": "c171b700194e3272",
+     "name": "xl/media/image1.jpeg"
+    },
+    {
+     "bytes": 108346,
+     "fnv": "a79669f0ed4cffb3",
+     "name": "xl/media/image2.jpeg"
+    },
+    {
+     "bytes": 81609,
+     "fnv": "336f338755a4ae9d",
+     "name": "xl/media/image3.jpeg"
+    },
+    {
+     "bytes": 125619,
+     "fnv": "26aede371eca4331",
+     "name": "xl/media/image4.jpeg"
+    },
+    {
+     "bytes": 86933,
+     "fnv": "6144445fe16d38a6",
+     "name": "xl/media/image5.jpeg"
+    },
+    {
+     "bytes": 3671,
+     "fnv": "ad4b45c490fea6ad",
+     "name": "xl/media/image6.jpeg"
+    },
+    {
+     "bytes": 1153,
+     "fnv": "bda644bc6e0e2919",
+     "name": "xl/media/image7.png"
+    },
+    {
+     "bytes": 105855,
+     "fnv": "a56860df43a2784e",
+     "name": "xl/media/image8.png"
+    },
+    {
+     "bytes": 90054,
+     "fnv": "bf7ba7c576cb2a29",
+     "name": "xl/media/image9.bmp"
+    }
+   ],
+   "media_removed": 0,
+   "pictures_kept": 0,
+   "rejected": null,
+   "scan": {
+    "ghosts": 0,
+    "images": 9
+   },
+   "source": "photos.xlsx"
+  }
+ ],
+ "tool": "rust"
+}

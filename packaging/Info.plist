@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Snuffler</string>
+	<key>CFBundleDisplayName</key>
+	<string>Snuffler</string>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.jo-crawf.snuffler</string>
+	<key>CFBundleExecutable</key>
+	<string>Snuffler</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleShortVersionString</key>
+	<string>__VERSION__</string>
+	<key>CFBundleVersion</key>
+	<string>__VERSION__</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>11.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>Public domain (CC0).</string>
+
+	<!-- Shown when macOS asks, once per folder, whether Snuffler may save there. -->
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>Snuffler saves the cleaned copy next to the workbook you gave it.</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>Snuffler saves the cleaned copy next to the workbook you gave it.</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>Snuffler saves the cleaned copy next to the workbook you gave it.</string>
+	<key>NSNetworkVolumesUsageDescription</key>
+	<string>Snuffler saves the cleaned copy next to the workbook you gave it.</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>Snuffler saves the cleaned copy next to the workbook you gave it.</string>
+
+	<!-- Lets a workbook be dropped on the Dock icon, or opened with "Open With".
+	     Alternate rank: Snuffler must never become the default app for .xlsx. -->
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeName</key>
+			<string>Excel Workbook</string>
+			<key>CFBundleTypeRole</key>
+			<string>Viewer</string>
+			<key>LSHandlerRank</key>
+			<string>Alternate</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>org.openxmlformats.spreadsheetml.sheet</string>
+				<string>org.openxmlformats.spreadsheetml.sheet.macroenabled</string>
+				<string>com.microsoft.excel.sheet.macroenabled</string>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

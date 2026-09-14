@@ -1,0 +1,9 @@
+# Shell scripts run on macOS; a CRLF from a Windows checkout would break them.
+*.sh     text eol=lf
+*.py     text eol=lf
+*.plist  text eol=lf
+*.yml    text eol=lf
+
+*.xlsx   binary
+*.xlsm   binary
+*.png    binary
